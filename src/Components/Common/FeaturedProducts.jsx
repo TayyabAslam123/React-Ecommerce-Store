@@ -28,9 +28,9 @@ const FeaturedProducts = () => {
                                         <img src={product.image} alt="Product Image" />
                                     </a>
                                     <div className="product-action">
-                                        {/* <a href="#"><i className="fa fa-cart-plus"></i></a>
+                                        <a href="#"><i className="fa fa-cart-plus"></i></a>
                                         <a href="#"><i className="fa fa-heart"></i></a>
-                                        <a href="#"><i className="fa fa-search"></i></a> */}
+                                        <a href="#"><i className="fa fa-search"></i></a>
                                         <a href="#"><i className="fa fa-eye"></i></a>
 
                                     </div>

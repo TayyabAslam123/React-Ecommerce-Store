@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+    Link
+} from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -12,8 +15,9 @@ const NavBar = () => {
 
                     <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div className="navbar-nav m-auto">
-                            <a href="index.html" className="nav-item nav-link active">Home</a>
-                            <a href="product-list.html" className="nav-item nav-link">Products</a>
+                            {/* <a href="index.html" className="nav-item nav-link active">Home</a> */}
+                            <Link to="/" className="nav-item nav-link">Home</Link>
+                            <Link to="/products" className="nav-item nav-link">Products</Link>
                             <div className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div className="dropdown-menu">
@@ -26,7 +30,8 @@ const NavBar = () => {
                                     <a href="my-account.html" className="dropdown-item">My Account</a>
                                 </div>
                             </div>
-                            <a href="contact.html" className="nav-item nav-link">Contact Us</a>
+                            {/* <a href="contact.html" className="nav-item nav-link">Contact Us</a> */}
+                            <Link to="/contact" className="nav-item nav-link">Contact</Link>
                         </div>
                     </div>
                 </nav>
