@@ -22,7 +22,7 @@ const RecentProducts = () => {
                     </div>
                     <div className="row align-items-center product-slider product-slider-4">
                         {products.map((product) => (
-                            <div className="col-lg-2" id={product.id}>
+                            <div className="col-lg-2" key={product.id}>
                                 <div className="product-item">
                                     <div className="product-image">
                                         <a href="product-detail.html">

@@ -1,5 +1,5 @@
 import React from 'react'
-import Slider from '../Common/Slider'
+import SliderSection from '../Common/SliderSection'
 import FeaturedProducts from '../Common/FeaturedProducts'
 import RecentProducts from '../Common/RecentProducts'
 import OurBrands from '../Common/OurBrands'
@@ -7,7 +7,7 @@ import OurBrands from '../Common/OurBrands'
 const Home = () => {
     return (
         <>
-            <Slider />
+            <SliderSection />
 
             {/* Feature's Section */}
             <div className="feature">
