@@ -3,10 +3,12 @@ import Slider from '../Common/Slider'
 import FeaturedProducts from '../Common/FeaturedProducts'
 import RecentProducts from '../Common/RecentProducts'
 import OurBrands from '../Common/OurBrands'
+
 const Home = () => {
     return (
         <>
             <Slider />
+
             {/* Feature's Section */}
             <div className="feature">
                 <div className="container-fluid">
@@ -95,14 +97,14 @@ const Home = () => {
             <FeaturedProducts />
             {/* Featured Products */}
 
-
-            {/* Featured Products */}
+            {/* Recent Products */}
             <RecentProducts />
-            {/* Featured Products */}
+            {/* Recent Products */}
 
-            {/* Featured Products */}
+            {/* Brands */}
             <OurBrands />
-            {/* Featured Products */}
+            {/* Brands */}
+
         </>
     )
 }

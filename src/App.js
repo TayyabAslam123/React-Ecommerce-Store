@@ -6,6 +6,7 @@ import Home from './Components/Pages/Home';
 import Footer from './Components/Common/Footer';
 import Contact from './Components/Pages/Contact';
 import Products from './Components/Pages/Products';
+import { ProductDetail } from './Components/Pages/ProductDetail';
 import {
   BrowserRouter as Router,
   Routes,
@@ -22,6 +23,7 @@ function App() {
         <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/products" element={<Products />} />
+        <Route exact path="/product-detail/:id" element={<ProductDetail />} />
         <Route exact path="/contact" element={<Contact />} />
       </Routes>
         <Footer />
