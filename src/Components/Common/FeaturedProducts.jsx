@@ -11,9 +11,10 @@ const FeaturedProducts = () => {
     var settings = {
         autoplay: true,
         infinite: true,
+        speed:3000,
         dots: true,
         slidesToShow: 6,
-        slidesToScroll: 6,
+        slidesToScroll: 3,
         autoplay: true,
         autoplaySpeed: 2000,
         responsive: [
