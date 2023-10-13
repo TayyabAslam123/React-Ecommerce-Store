@@ -9,13 +9,11 @@ const FeaturedProducts = () => {
 
 
     var settings = {
-        autoplay: true,
+        autoplay: false,
         infinite: true,
-        dots: true,
-        slidesToShow: 6,
-        slidesToScroll: 6,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        dots: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 1200,
@@ -62,7 +60,7 @@ const FeaturedProducts = () => {
                     </div>
                     <Slider {...settings} className="row align-items-center product-slider product-slider-4">
                         {products.map((product) => (
-                            <div key={product.id} >
+                            <div key={product.id} className="col-lg-12">
                                 <div className="product-item" >
                                     <div className="product-image">
                                         <Link to={`/product-detail/${product.id}`}>

@@ -26,7 +26,7 @@ const RecentProducts = () => {
                                 <div className="product-item">
                                     <div className="product-image">
                                         <a href="product-detail.html">
-                                            <img src={product.image} alt="Product Image" />
+                                            <img src={product.image} alt="Product Image"  style={{ height: '200px', width: '100%' }}/>
                                         </a>
                                         <div className="product-action">
                                             <a href="#"><i className="fa fa-cart-plus"></i></a>
@@ -45,7 +45,7 @@ const RecentProducts = () => {
                                             <i className="fa fa-star"></i>
                                             <i className="fa fa-star"></i>
                                         </div>
-                                        <div className="price">{product.price}<span>$25</span></div>
+                                        <div className="price">Rs {product.price}<span>25</span></div>
                                     </div>
                                 </div>
                             </div>
