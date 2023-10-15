@@ -9,11 +9,13 @@ const FeaturedProducts = () => {
 
 
     var settings = {
-        autoplay: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
         infinite: true,
         dots: false,
         slidesToShow: 5,
         slidesToScroll: 1,
+        lazyLoad: true,
         responsive: [
             {
                 breakpoint: 1200,
@@ -55,7 +57,7 @@ const FeaturedProducts = () => {
                     <div className="section-header">
                         <h3>Featured Product</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra at massa sit amet ultricies. Nullam consequat, mauris non interdum cursus
+                            Our Featured Products section showcases a curated selection of our finest items, handpicked for their exceptional quality and popularity
                         </p>
                     </div>
                     <Slider {...settings} className="row align-items-center product-slider product-slider-4">
@@ -66,31 +68,31 @@ const FeaturedProducts = () => {
                                         <Link to={`/product-detail/${product.id}`}>
                                             <img src={product.image} alt="Product Image" style={{ height: '250px', width: '100%' }} />
                                         </Link>
-                                    <div className="product-action">
-                                        <a href="#"><i className="fa fa-cart-plus"></i></a>
-                                        <a href="#"><i className="fa fa-heart"></i></a>
-                                        <a href="#"><i className="fa fa-search"></i></a>
-                                        <a href="#"><i className="fa fa-eye"></i></a>
+                                        <div className="product-action">
+                                            <a href="#"><i className="fa fa-cart-plus"></i></a>
+                                            <a href="#"><i className="fa fa-heart"></i></a>
+                                            <a href="#"><i className="fa fa-search"></i></a>
+                                            <a href="#"><i className="fa fa-eye"></i></a>
 
+                                        </div>
+                                    </div>
+                                    <div className="product-content">
+                                        <div className="title"><a href="#">{product.title}</a></div>
+                                        <div className="ratting">
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                        </div>
+                                        <div className="price">Rs {product.price}</div>
                                     </div>
                                 </div>
-                                <div className="product-content">
-                                    <div className="title"><a href="#">{product.title}</a></div>
-                                    <div className="ratting">
-                                        <i className="fa fa-star"></i>
-                                        <i className="fa fa-star"></i>
-                                        <i className="fa fa-star"></i>
-                                        <i className="fa fa-star"></i>
-                                        <i className="fa fa-star"></i>
-                                    </div>
-                                    <div className="price">Rs {product.price}</div>
-                                </div>
                             </div>
-                            </div>
-                            
+
                         ))}
-            </Slider>
-        </div >
+                    </Slider>
+                </div >
             </div >
         </>
     )

@@ -9,13 +9,14 @@ const RecentProducts = () => {
 
 
     var settings = {
-        autoplay: true,
-        infinite: true,
         dots: true,
+        infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        speed: 3000,
+        autoplaySpeed: 3000,
+        cssEase: "linear",
         responsive: [
             {
                 breakpoint: 1200,
@@ -44,6 +45,7 @@ const RecentProducts = () => {
         ]
     };
 
+
     useEffect(() => {
         fetch('https://fakestoreapi.com/products?limit=15')
             .then(response => response.json())
@@ -57,23 +59,24 @@ const RecentProducts = () => {
                     <div className="section-header">
                         <h3>Recent Product</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra at massa sit amet ultricies. Nullam consequat, mauris non interdum cursus
+                        Explore Our Latest Arrivals: Stay Ahead of the Trends with Our Fresh and Exciting Products
                         </p>
                     </div>
                     <Slider {...settings} className="row align-items-center product-slider product-slider-4">
                         {products.map((product) => (
-                            <div key={product.id} >
+                            <div key={product.id} className="col-lg-12">
                                 <div className="product-item" >
                                     <div className="product-image">
-                                        <a href="product-detail.html">
-                                            <img src={product.image} alt="Product Image"  style={{ height: '200px', width: '100%' }}/>
-                                        </a>
+                                        <Link to={`/product-detail/${product.id}`}>
+                                            <img src={product.image} alt="Product Image" style={{ height: '300px', width: '100%' }} />
+                                        </Link>
                                         <div className="product-action">
                                             <a href="#"><i className="fa fa-cart-plus"></i></a>
                                             <a href="#"><i className="fa fa-heart"></i></a>
                                             <a href="#"><i className="fa fa-search"></i></a>
                                             <a href="#"><i className="fa fa-eye"></i></a>
 
+                                        </div>
                                     </div>
                                     <div className="product-content">
                                         <div className="title"><a href="#">{product.title}</a></div>
@@ -84,16 +87,14 @@ const RecentProducts = () => {
                                             <i className="fa fa-star"></i>
                                             <i className="fa fa-star"></i>
                                         </div>
-                                        <div className="price">Rs {product.price}<span>25</span></div>
+                                        <div className="price">Rs {product.price}</div>
                                     </div>
-                                    <div className="price">Rs {product.price}</div>
                                 </div>
                             </div>
-                            </div>
-                            
+
                         ))}
-            </Slider>
-        </div >
+                    </Slider>
+                </div >
             </div >
         </>
     )
